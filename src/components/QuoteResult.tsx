@@ -23,7 +23,7 @@ export function QuoteResult({ quote }: { quote: Quote }) {
       <h3>Installment offers</h3>
       <ul className="offers" role="list">
         {quote.offers.map((offer) => (
-          <li key={offer.termYears} className="offer" style={{ listStyle: "none" }}>
+          <li key={offer.termYears} className="offer">
             <div>{offer.termYears} years</div>
             <div className="amount">{formatEur(offer.monthlyPayment)} / month</div>
             <div className="hint">APR {formatPercent(offer.apr)}</div>
