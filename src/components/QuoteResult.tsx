@@ -31,13 +31,21 @@ export function QuoteResult({ quote }: { quote: Quote }) {
         ))}
       </ul>
 
-      <h3>Your inputs</h3>
-      <p>
-        {quote.inputs.fullName} ({quote.inputs.email}), {quote.inputs.address}
-        <br />
-        {quote.inputs.monthlyConsumptionKwh} kWh per month, {quote.inputs.systemSizeKw} kW system,
-        down payment {formatEur(quote.inputs.downPayment)}
-      </p>
+      <h3>Request details</h3>
+      <dl className="details">
+        <dt>Name</dt>
+        <dd>{quote.inputs.fullName}</dd>
+        <dt>Email</dt>
+        <dd>{quote.inputs.email}</dd>
+        <dt>Address</dt>
+        <dd>{quote.inputs.address}</dd>
+        <dt>Monthly consumption</dt>
+        <dd>{quote.inputs.monthlyConsumptionKwh} kWh</dd>
+        <dt>System size</dt>
+        <dd>{quote.inputs.systemSizeKw} kW</dd>
+        <dt>Down payment</dt>
+        <dd>{formatEur(quote.inputs.downPayment)}</dd>
+      </dl>
     </section>
   );
 }

@@ -16,10 +16,10 @@ export default async function AdminQuotesPage({ searchParams }: Props) {
     <>
       <h1>All quotes</h1>
       {/* A plain GET form: submitting it reloads the page with ?search=... */}
-      <form role="search" className="field" style={{ maxWidth: 460, marginBottom: "1rem" }}>
+      <form role="search" className="field">
         <label htmlFor="search">Filter by customer name or email</label>
-        <div style={{ display: "flex", gap: "0.5rem" }}>
-          <input id="search" name="search" defaultValue={search} style={{ flex: 1 }} />
+        <div className="search">
+          <input id="search" name="search" defaultValue={search} />
           <button type="submit">Filter</button>
         </div>
       </form>
